@@ -1,0 +1,29 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bodyContainer{
+	margin: 0;
+	padding: 0;
+}
+.logo{
+	border: solid;
+	width: fit-content;
+	height: fit-content;
+	position: relative;
+	left: 100px;
+	top: 50px;
+}
+
+.interactiveFaceContainer{
+	border: solid;
+	width: 600px;
+	height: 500px;
+	margin: auto;
+	top: 50%;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+
+}
+
