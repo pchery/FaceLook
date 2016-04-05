@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .bodyContainer{
-	margin: 0;
-	padding: 0;
+	margin: 0px;
+	padding: 0px;
 }
 .logo{
 	border: solid;
@@ -12,18 +12,28 @@
 	height: fit-content;
 	position: relative;
 	left: 100px;
-	top: 50px;
+	top: 0px;
 }
 
+.navbar {
+    background-color: #EFEFEF;
+    top: 30%;
+    height: 50px;
+    margin: 0px;
+
+}
+
+
 .interactiveFaceContainer{
-	border: solid;
-	width: 600px;
-	height: 500px;
-	margin: auto;
-	top: 50%;
+    border: 0;
+    top: 50%;
 	position: absolute;
 	left: 50%;
+    width: fit-content;
+    height: fit-content;
 	transform: translate(-50%, 0);
-
+    background-image: url("face.jpg");
+    background-size: 100% 100%;
+    margin: auto;
 }
 
