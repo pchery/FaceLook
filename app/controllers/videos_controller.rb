@@ -14,10 +14,10 @@ end
 
 
 def create
-	@video = Video.new(params[video_params])
+	@video = Video.new(params.require(:video).permit(:link))
   	if @video.save
     	flash[:success] = 'Video added!'
-    	redirect_to root_url
+    	redirect_to videos_path
   	else
     	render 'new'
 	end

@@ -12,16 +12,17 @@ class Video < ActiveRecord::Base
 	    if self.uid.to_s.length != 11
 	      self.errors.add(:link, 'is invalid.')
 	      false
-	    elsif Video.where(uid: self.uid).any?
+	    if Video.where(uid: self.uid).any?
 	      self.errors.add(:link, 'is not unique.')
 	      false
 	    else
 	      get_additional_info
 	    end
 	end
+end	
+	
 
 	private
-
 		def get_additional_info
 		  begin
 		    client = YouTubeIt::OAuth2Client.new(dev_key: 'AIzaSyAg6-XPxVLgFh-9msk8CQae_Ij7v5l9pr4')
@@ -48,3 +49,4 @@ class Video < ActiveRecord::Base
 		  hr.to_s + ':' + min.to_s + ':' + sec.to_s
 		end
 	end
+
